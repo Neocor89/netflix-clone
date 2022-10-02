@@ -28,7 +28,7 @@ const Nav = () => {
         />
         <img
           className="nav__avatar"
-          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/84c20033850498.56ba69ac290ea.png"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"
           alt="avatar"
         />
       </div>
