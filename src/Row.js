@@ -1,7 +1,8 @@
 import axios from "./axios";
 /*
- TODO 
- : Be Careful not axios package but all requests */
+ + TODO 
+ : Be Careful not axios package but file requests */
+
 import React, { useEffect, useState } from "react";
 import "./Row.css";
 
@@ -31,8 +32,6 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
               <img
-                // ref={ref}
-                // onClick={() => handleClick(movie)}
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                 key={movie.id}
                 src={`${base_url}${
