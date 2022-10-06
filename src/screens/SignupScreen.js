@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./SignupScreen.css";
 
 const SignupScreen = () => {
+  /*
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+
   const register = (e) => {
-    e.preventDefault();
-  };
+   e.preventDefault();
+
+   auth
+     .createUserWithEmailAndPassword(
+       emailRef.current.value,
+       passwordRef.current.value
+     )
+     .then((authUser) => {
+       console.log(authUser);
+     })
+     .catch((err) => {
+       alert(err.message);
+     });
+ };
+  ref={emailRef} 37
+  ref={passwordRef} 38
+  onClick={register} 44
+  */
 
   const signIn = (e) => {
     e.preventDefault();
@@ -21,9 +41,7 @@ const SignupScreen = () => {
         </button>
         <h4>
           <span className="signupScreen__gray">New to Netflix ? </span>
-          <span className="signupScreen__link" onClick={register}>
-            Sign Up now.
-          </span>
+          <span className="signupScreen__link">Sign Up now.</span>
         </h4>
       </form>
     </div>
