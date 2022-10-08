@@ -1,47 +1,62 @@
 import React, { useRef } from "react";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../firebase";
 import "./SignupScreen.css";
 
 const SignupScreen = () => {
-  /*
+  //: Register and Login with useRef
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
+  //: Implement Login & Register using Firebase
   const register = (e) => {
-   e.preventDefault();
+    e.preventDefault();
 
-   auth
-     .createUserWithEmailAndPassword(
-       emailRef.current.value,
-       passwordRef.current.value
-     )
-     .then((authUser) => {
-       console.log(authUser);
-     })
-     .catch((err) => {
-       alert(err.message);
-     });
- };
-  ref={emailRef} 37
-  ref={passwordRef} 38
-  onClick={register} 44
-  */
+    createUserWithEmailAndPassword(
+      auth,
+      emailRef.current.value,
+      passwordRef.current.value
+    )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
 
   const signIn = (e) => {
     e.preventDefault();
+    signInWithEmailAndPassword(
+      auth,
+      emailRef.current.value,
+      passwordRef.current.value
+    )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
 
   return (
     <div className="signupScreen">
       <form>
         <h1>Sign In</h1>
-        <input placeholder="Email" type="email" />
-        <input placeholder="Password" type="password" />
+        <input ref={emailRef} placeholder="Email" type="email" />
+        <input ref={passwordRef} placeholder="Password" type="password" />
         <button type="submit" onClick={signIn}>
           Sign In
         </button>
         <h4>
           <span className="signupScreen__gray">New to Netflix ? </span>
-          <span className="signupScreen__link">Sign Up now.</span>
+          <span className="signupScreen__link" onClick={register}>
+            Sign Up now.
+          </span>
         </h4>
       </form>
     </div>
