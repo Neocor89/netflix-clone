@@ -22,12 +22,12 @@ function App() {
           })
         );
       } else {
-        //: Logout
-        dispatch(logout);
+        //: Reset User inside Redux
+        dispatch(logout());
       }
     });
     return unsubscribe;
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">

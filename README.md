@@ -19,7 +19,14 @@ alt="render of hero section Netflix clone" />
 
 #
 
-<!-- 💳⚙️🔗🎥🪄📺📼🔊 -->
+<!--
+💳⚙️🔗🎥🪄📺📼🔊
+! ERROR
+: WARNING in ./node_modules/@firebase/util/dist/index.esm2017.js 741:19-44
+: Critical dependency: the request of a dependency is an expression
+! FIX WITH
++ npm install request@2.79.0 --save
+-->
 
 ## _Available Scripts_
 
