@@ -17,6 +17,10 @@
   display: flex;
 }
 
+/* .profileScreen__info > img {
+  width: 100px;
+} */
+
 .profileScreen__details {
   color: #fff;
   margin-left: 25px;
@@ -62,5 +66,23 @@
 }
 
 .profileScreen__info > img {
-  height: 100px;
+  height: 65px;
+}
+
+@media (max-width: 400px) {
+  .profileScreen__body > h1 {
+    font-size: 2rem;
+    padding-bottom: 5px;
+  }
+
+  .profileScreen__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 45%; /*: 8% :*/
+    /* max-width: 800px; */
+  }
+
 }
