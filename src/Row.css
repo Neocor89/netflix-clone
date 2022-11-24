@@ -39,6 +39,14 @@
 @media (max-width: 400px) {
  .originals__title {
   font-size: 1.4rem;
- } 
+ }
+
+ .row {
+  margin-left: 10px;
+}
+
+ .row__posters {
+  padding: 5px;
+}
 
 }
