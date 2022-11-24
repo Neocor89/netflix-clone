@@ -32,6 +32,7 @@ const Banner = () => {
         backgroundSize: "cover",
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: "center 21%",
+        objectFit: "contain",
       }}
     >
       <div className="banner__contents">

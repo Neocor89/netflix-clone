@@ -3,6 +3,8 @@ import React from "react";
 import "./PlansScreen.css";
 // import db from "../firebase";
 
+// TODO >> FIND IF AN ERROR IN FIREBASE
+
 const PlansScreen = () => {
   // const [products, setProducts] = useState([]);
 
